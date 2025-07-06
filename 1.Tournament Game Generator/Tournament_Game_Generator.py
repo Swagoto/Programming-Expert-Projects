@@ -59,3 +59,8 @@ sorted_team_wins =dict(sorted(team_wins.items(), key = lambda item:item[1]))
 
 #sort the team names by wins and create list
 sorted_teams = list(sorted_team_wins.keys())
+
+print("Generating the games to be played in the first round of the tournament...")
+while len(sorted_teams)!=0:
+    print(f"Home: {sorted_teams[0]} VS. Away: {sorted_teams.pop()}")
+    sorted_teams.remove(sorted_teams[0])
