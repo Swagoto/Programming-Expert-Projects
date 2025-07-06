@@ -63,5 +63,8 @@ sorted_teams = list(sorted_team_wins.keys())
 #Step 6 & 7: Generate
 print("Generating the games to be played in the first round of the tournament...")
 while len(sorted_teams)!=0:
-    print(f"Home: {sorted_teams[0]} VS. Away: {sorted_teams.pop()}")
-    sorted_teams.remove(sorted_teams[0])
+    home = sorted_teams[0]
+    away = sorted_teams[len(sorted_teams)-1]
+    print(f"Home: {home} VS. Away: {away}")
+    sorted_teams.remove(home)
+    sorted_teams.remove(away)
