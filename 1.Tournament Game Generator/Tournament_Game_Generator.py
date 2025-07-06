@@ -65,6 +65,6 @@ print("Generating the games to be played in the first round of the tournament...
 while len(sorted_teams)!=0:
     home = sorted_teams[0]
     away = sorted_teams[len(sorted_teams)-1]
-    print(f"Home: {home} VS. Away: {away}")
+    print(f"Home: {home} VS Away: {away}")
     sorted_teams.remove(home)
     sorted_teams.remove(away)
