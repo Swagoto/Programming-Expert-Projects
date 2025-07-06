@@ -24,7 +24,6 @@ for i in range(number_of_teams):
             team_names.append(name)
             break
 
-print(team_names)
 
 #Step 3: Number of games
 while True:
@@ -55,16 +54,12 @@ for team in team_names:
             print("Please try again with a valid integer value.")
 
 #Step 5: Sort by wins
-sorted_team_wins =dict(sorted(team_wins.items(), key = lambda item:item[1]))
+sorted_teams =[team for team,_ in sorted(team_wins.items(), key = lambda item: item[1])]
 
-#sort the team names by wins and create list
-sorted_teams = list(sorted_team_wins.keys())
 
 #Step 6 & 7: Generate
 print("Generating the games to be played in the first round of the tournament...")
 while len(sorted_teams)!=0:
-    home = sorted_teams[0]
-    away = sorted_teams[len(sorted_teams)-1]
+    home = sorted_teams.pop(0)
+    away = sorted_teams.pop(-1)
     print(f"Home: {home} VS Away: {away}")
-    sorted_teams.remove(home)
-    sorted_teams.remove(away)
