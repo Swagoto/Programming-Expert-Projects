@@ -19,8 +19,8 @@ Steps and Actions
     *input*: team(n)_wins = int
     *Constraints*: team(n)_wins <= n_games
 
-4. **Makes a descending order series based on team wins**
-5. **Register the match with the first and the last member of the series and delete those names**
+5. **Makes a descending order series based on team wins**
+6. **Register the match with the first and the last member of the series and delete those names**
     *Output*: {max win least} vs {least win team}
 
-6. **Repeat Step 5**
+7. **Repeat Step 6**
